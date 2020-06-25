@@ -1,6 +1,6 @@
-import 'package:bookstore/widgets/accountScreen.dart';
-import 'package:bookstore/widgets/explorePage.dart';
-import 'package:bookstore/widgets/homeScreen.dart';
+import 'package:bookstore/screens/accountScreen.dart';
+import 'package:bookstore/screens/explorePage.dart';
+import 'package:bookstore/screens/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
