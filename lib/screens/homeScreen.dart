@@ -54,7 +54,19 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: Book(),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: <Widget>[
+            Book("Heinrich Heine", "Das Märchen meines Lebens",
+                "lib/covers/maerchenmeineslebens.jpg"),
+            Book("Deborah Levy", "Was das Leben kostet",
+                "lib/covers/waskostetdasleben.jpg"),
+            Book("Siegfried Lenz", "Fundbüro", "lib/covers/fundburo.jpg")
+          ],
+        ),
+      ),
     );
   }
 }
