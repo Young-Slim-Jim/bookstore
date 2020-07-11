@@ -14,7 +14,7 @@ class Book extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Container(
         width: width * 0.45,
         child: Column(

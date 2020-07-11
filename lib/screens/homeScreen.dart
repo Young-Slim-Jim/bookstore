@@ -1,3 +1,4 @@
+import 'package:bookstore/widgets/authorCard.dart';
 import 'package:bookstore/widgets/book.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: const Color(0xfff5f5f5),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(height * 0.15),
         child: DefaultTabController(
@@ -21,11 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Align(
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  "Homepage",
+                  "Discover Books",
                   style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 50),
+                      fontWeight: FontWeight.w900,
+                      fontSize: 40),
                 ),
               ),
             ),
@@ -54,18 +57,62 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            Book("Heinrich Heine", "Das Märchen meines Lebens",
-                "lib/covers/maerchenmeineslebens.jpg"),
-            Book("Deborah Levy", "Was das Leben kostet",
-                "lib/covers/waskostetdasleben.jpg"),
-            Book("Siegfried Lenz", "Fundbüro", "lib/covers/fundburo.jpg")
-          ],
-        ),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 5,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 40,
+              ),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Book("Heinrich Heine", "Das Märchen meines Lebens",
+                      "lib/covers/maerchenmeineslebens.jpg"),
+                  Book("Deborah Levy", "Was das Leben kostet",
+                      "lib/covers/waskostetdasleben.jpg"),
+                  Book("Siegfried Lenz", "Fundbüro", "lib/covers/fundburo.jpg")
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              width: width,
+              color: Colors.white,
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10.0, vertical: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          "Authors to follow",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25),
+                        ),
+                        Text(
+                          "Show all",
+                          style: TextStyle(
+                              color: const Color(0xffdddddd),
+                              fontWeight: FontWeight.w300,
+                              fontSize: 25),
+                        ),
+                      ],
+                    ),
+                  ),
+                  AuthorCard("lil", 25, "Astrod"),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
