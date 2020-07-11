@@ -83,10 +83,11 @@ class _HomeScreenState extends State<HomeScreen> {
               width: width,
               color: Colors.white,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0, vertical: 10.0),
+                        horizontal: 10.0,),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -107,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  AuthorCard("lil", 25, "Astrod"),
+                  AuthorCard("lib/profilPics/lindgren.jpg", 25, "Astrid Lindgren"),
                 ],
               ),
             ),

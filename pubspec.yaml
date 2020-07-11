@@ -51,6 +51,7 @@ flutter:
     - lib/covers/maerchenmeineslebens.jpg
     - lib/covers/waskostetdasleben.jpg
     - lib/covers/fundburo.jpg
+    - lib/profilPics/lindgren.jpg
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
