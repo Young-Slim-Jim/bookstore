@@ -87,7 +87,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0,),
+                      horizontal: 10.0,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -108,7 +109,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  AuthorCard("lib/profilPics/lindgren.jpg", 25, "Astrid Lindgren"),
+                  AuthorCard(
+                    ["lib/profilPics/lindgren.jpg"],
+                    ["25 Books", "30 Books", "3 Books"],
+                    [
+                      "Astrid Lindgren",
+                      "David Precht",
+                      "Dr Jordan Peterson"
+                    ],
+                  ),
                 ],
               ),
             ),
