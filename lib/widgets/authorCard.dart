@@ -21,7 +21,7 @@ class _AuthorCardState extends State<AuthorCard> {
     var width = MediaQuery.of(context).size.width;
     return Container(
       height: height * 0.12,
-      width: width * 0.7,
+      width: width * 0.85,
       decoration: BoxDecoration(
         color: const Color(0xfff5f5f5),
         borderRadius: BorderRadius.circular(15),
@@ -38,7 +38,7 @@ class _AuthorCardState extends State<AuthorCard> {
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image(
                   image: AssetImage(widget.bild[0]),
-                  fit: BoxFit.fill,
+                  fit: BoxFit.scaleDown,
                 ),
               ),
             ),

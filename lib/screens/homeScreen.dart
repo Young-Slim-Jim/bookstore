@@ -13,12 +13,14 @@ class _HomeScreenState extends State<HomeScreen> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+    
       backgroundColor: const Color(0xfff5f5f5),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(height * 0.15),
         child: DefaultTabController(
           length: 3,
           child: AppBar(
+            brightness: Brightness.light,
             flexibleSpace: Padding(
               padding: const EdgeInsets.only(bottom: 50, left: 35),
               child: Align(
@@ -111,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   AuthorCard(
                     ["lib/profilPics/lindgren.jpg"],
-                    ["25 Books", "30 Books", "3 Books"],
+                    ["25 Bücher", "30 Books", "3 Books"],
                     [
                       "Astrid Lindgren",
                       "David Precht",
